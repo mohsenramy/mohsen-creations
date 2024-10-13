@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ES2020", // Use a modern target for better compatibility with async/await and newer JS features
+    "module": "ESNext", // Align with ESM standard for Node.js
+    "moduleResolution": "Bundler", // Use ESM module resolution to ensure compatibility with the Node.js ecosystem
+    "lib": [
+      "ES2020"
+    ], // Specify standard library features
+    "strict": true, // Enable all strict type-checking options
+    "allowSyntheticDefaultImports": true, // Allow default imports even if module doesn't have default export (useful for CommonJS interop)
+    "esModuleInterop": true, // Enable ES module interoperability
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file name casing to avoid cross-platform issues
+    /* Output Configuration */
+    "outDir": "./dist", // Output directory for compiled files
+    "rootDir": "./src", // Specify the root folder within your source files
+    "sourceMap": true, // Generate source maps for easier debugging
+    "declaration": true, // Generate declaration (.d.ts) files for TypeScript modules
+    "declarationMap": true, // Generate source maps for .d.ts files
+    /* Module Resolution */
+    "resolveJsonModule": true, // Allow importing .json files as modules
+    "types": [
+      "vitest/globals"
+    ], // Include Node.js types by default
+    /* Type Checking Options */
+    "noImplicitAny": true, // Ensure explicit typing by flagging 'any' usage as an error
+    "strictNullChecks": true, // Handle `null` and `undefined` values explicitly
+    "strictFunctionTypes": true, // Check compatibility of function parameter types
+    "strictBindCallApply": true, // Enforce parameter checks for `bind`, `call`, and `apply`
+    "noImplicitReturns": true, // Report errors for functions missing return statements on some code paths
+    "noFallthroughCasesInSwitch": true, // Ensure that switch statements don't fall through to subsequent cases
+    "exactOptionalPropertyTypes": true, // Treat optional properties as strictly typed
+    /* Linting and Code Quality */
+    "noUnusedLocals": true, // Flag unused local variables for cleanup
+    "noUnusedParameters": true, // Flag unused function parameters for cleanup
+    "noImplicitThis": true, // Enforce typing for `this`
+    "noUncheckedIndexedAccess": true, // Ensure safer array and object element access by marking them as potentially `undefined`
+    /* Module Interop and Compatibility */
+    "verbatimModuleSyntax": true, // Ensure module syntax is preserved for more predictable outputs
+    "allowArbitraryExtensions": true, // Allow flexibility with importing files with extensions like `.ts` or `.mjs`
+    "skipLibCheck": true // Skip type checking of declaration files for faster builds
+  },
+  "include": [
+    "src/**/*.ts"
+  ], // Specify the root file(s) or folders to include in the project
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts"
+  ] // Exclude unnecessary folders/files from the compilation
+}
